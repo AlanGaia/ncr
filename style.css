@@ -1,0 +1,47 @@
+h1{
+  font-family: 'Roboto', sans-serif;
+}
+
+.text-green{
+  color: rgb(124, 173, 10);
+}
+
+.bg-gray{
+  background-color: rgb(83, 83, 85);
+}
+
+.bg-gradient-green{
+  background: rgb(134,183,59);
+  background: linear-gradient(90deg, rgba(134,183,59,1) 32%, rgba(176,220,78,1) 56%, rgba(72,118,18,1) 100%); 
+}
+
+table th{
+  padding: 10px;
+  font-size: 0.88em;
+
+}
+table td{
+  font-size: 1.7em;
+  color: #ffffffff;
+}
+
+.input-valor{
+  background-color: #ffffffff;
+  font-size: 2.1em;
+  color: rgb(124, 173, 10);
+  border-radius: 20px;
+  width: 50%;
+  margin: auto;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.input-boton{
+  background-color: transparent;
+  font-size: 2em;
+  color: #ffffffff;
+  border-radius: 20px;
+  margin: auto;
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
