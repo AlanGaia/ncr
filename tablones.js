@@ -1,32 +1,22 @@
-const reducer = (acum,currentValue) => acum + currentValue;
-
-//Retorna la cantidad de clavos necesarios
-const clavosNecesarios = (comienzoDelTablon, finDelTablon) => {
-  let tablonA = comienzoDelTablon.reduce(reducer);
-  let tablonB = finDelTablon.reduce(reducer);
-
-  return tablonB - tablonA;
-}
-
-//Funcion Principal
 function tablones(A,B,C){
-  const clavosRequeridos = clavosNecesarios(A,B);
 
-  //Inicializo los clavos disponibles con la cantidad que hay en C[0]
-  let clavosDisponibles = C[0];
-
+  //Buscar el maximo de B
+  let max = Math.max(...B)
+  //Que posicion esta
+  let positionMax = B.indexOf(max);
+  // hay un C menor o igual que B y es mayor o igual que A?
   for (let i = 0; i < C.length; i++) {
-    if (clavosDisponibles >= clavosRequeridos) {
-      return i;
-      //Cuando tenga esa cantidad o más retorno el resultado
-    }
 
-    //Si no me alcanzan sumo los siguietes clavos a los que tengo disponibles
-    clavosDisponibles += C[i+1];
+    if (C[i] <= max && C[i] >= A[positionMax]) {
+      // retornar ese I + 1 (1 que representa la posicion 0)
+      return i+1;
+    }
   }
-  //Caso contrario, retorno -1 porque no tengo los clavos disponibles
+  // sino -1
   return -1;
+
+
 }
 
-console.log(tablones([1,4,7],[3,5,10],[1,3,3]));
 
+console.log(tablones([1,4,5,8], [4,5,9,10], [4,6,7,10,3]));
