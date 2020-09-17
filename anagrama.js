@@ -16,7 +16,6 @@ function matchesAndAnagrams(string1, string2){
   //Longitud de string2 para ir contando luego el ultimo caracter
   let lastCharacter = string2.length;
   let result = 0;
-
   //Recorro toda la cadena string1
   for (let i = 0; i < string1.length; i++) {
     //Corto la cadena string1 desde i a lastCharacter para ir comparando 
@@ -28,9 +27,8 @@ function matchesAndAnagrams(string1, string2){
     //Mantengo la relacion, si a i le sumo 1 tambien a
     lastCharacter++
   }
-
   return result;
 }
 
-
+//Ejecucion
 console.log(matchesAndAnagrams('hola, que buena ola Laomir','AOL'));
