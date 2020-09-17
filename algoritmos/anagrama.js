@@ -24,7 +24,7 @@ function matchesAndAnagrams(string1, string2){
     if( anagrams(subString1,string2) ){
       result++;
     }
-    //Mantengo la relacion, si a i le sumo 1 tambien a
+    //Mantengo la relacion, si a i le sumo 1 tambien a lastCharacter
     lastCharacter++
   }
   return result;
